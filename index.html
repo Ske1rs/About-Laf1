@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laf1</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .title {
+            font-size: 2em;
+            font-weight: 600;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .button {
+            text-decoration: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border: 1px solid black;
+            animation: fadeInButton 2s ease-in-out;
+            transition: all 0.3s;
+            width: 150px;
+            font-size: 1em;
+        }
+        .button:hover {
+            background-color: white;
+            border: 1px solid black;
+            color: #000;
+        }
+        .text-effect {
+            transition: transform 0.3s;
+        }
+        .text-effect:hover {
+            transform: scale(1.1);
+        }
+        .about {
+            background-color: #000;
+            color: #fff;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        .services {
+            background-color: #fff;
+            color: #000;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            transition: transform 0.3s;
+        }
+        .service-item:hover {
+            transform: scale(1.1);
+        }
+        .service-category {
+            font-size: 1.2em;
+        }
+        .service-description {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .service-price {
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        @media (max-width: 600px) {
+            .button {
+                width: 100px;
+                padding: 5px 10px;
+                font-size: 0.8em;
+            }
+            .service-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        .scroll-up-button {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            display: none;
+            transition: opacity 0.5s, background-color 0.5s, color 0.5s;
+        }
+        .scroll-up-button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="container" id="menu">
+        <h1 class="title">Laf1</h1>
+        <a class="button" href="#about">About</a>
+        <a class="button" href="#services">Services</a>
+        <a class="button" href="https://t.me/send?start=IVaCtW5pSPqx" target="_blank">Donate</a>
+    </header>
+    <section id="about" class="about">
+        <h2 class="text-effect">Adout me</h2>
+        <p class="text-effect">
+            Привет! Я Laf1. Хочу рассказать немного о себе.<br>
+            Мне 15 лет, в настоящее время занимаюсь криптовалютами.<br>
+            Могу создать простой сайт на Java, CSS и HTML.<br>
+            Ранее был интернет-героем, пытался заниматься доксингом и сваттингом, также был в розыске в даркнете.<br>
+            Все мои услуги вы можете найти ниже.<br>
+            Хорошего дня!
+        </p>
+    </section>
+    <section id="services" class="services">
+        <h2 class="text-effect" style="margin-bottom: 40px;">Services</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <p class="service-category">1. DOCS</p>
+                <p class="service-description">
+                    Пробиваю человека по своим базам, они составляют около 300 ГБ и охватывают такие страны как Украина, Россия, Казахстан, Беларусь и США.
+                </p>
+                <p class="service-price">Цена: $20</p>
+            </div>
+            <div class="service-item">
+                <p class="service-category">2. SWAT</p>
+                <p class="service-description">
+                    Делаю сообщения о ложном минировании куда вы скажете. Если есть информация о человеке, то $400, если нет - $420.
+                </p>
+                <p class="service-price">Цена: $400-$420</p>
+            </div>
+            <div class="service-item">
+                <p class="service-category">3. WEBSITE WRITING</p>
+                <p class="service-description">
+                    Могу написать легкий сайт. Цена в зависимости от сложности сайта.
+                </p>
+                <p class="service-price">Цена: $5-$30</p>
+            </div>
+            <div class="service-item">
+                <p class="service-category">4. CRYPT</p>
+                <p class="service-description">
+                    Могу помочь анализировать рынок + обучу этому.
+                </p>
+                <p class="service-price">Цена: $50</p>
+            </div>
+        </div>
+    </section>
+    <button class="scroll-up-button" onclick="scrollToTop()">Menu</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!window.location.hash) {
+                window.location.hash = '#menu';
+            }
+        });
+        window.onscroll = function() {
+            const scrollUpButton = document.querySelector('.scroll-up-button');
+            const rectMenu = document.querySelector('#menu').getBoundingClientRect();
+            const rectAbout = document.querySelector('#about').getBoundingClientRect();
+            const rectServices = document.querySelector('#services').getBoundingClientRect();
+            if (rectMenu.bottom <= 0) {
+                scrollUpButton.style.display = 'block';
+                scrollUpButton.style.opacity = '1';
+                scrollUpButton.style.pointerEvents = 'auto';
+                if (rectAbout.top <= 0 && rectAbout.bottom > 0) {
+                    scrollUpButton.style.backgroundColor = 'white';
+                    scrollUpButton.style.color = 'black';
+                } else if (rectServices.top <= window.innerHeight && rectServices.bottom > 0) {
+                    scrollUpButton.style.backgroundColor = 'black';
+                    scrollUpButton.style.color = 'white';
+                }
+            } else {
+                scrollUpButton.style.display = 'none';
+                scrollUpButton.style.opacity = '0';
+                scrollUpButton.style.pointerEvents = 'none';
+            }
+        };
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
